@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Detector Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f3f4f6;
+      }
+      header {
+        background: #111827;
+        color: #ffffff;
+        padding: 1rem 1.25rem;
+      }
+      main {
+        padding: 1.25rem;
+      }
+      .alert-list {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .alert-list th,
+      .alert-list td {
+        border: 1px solid #d1d5db;
+        padding: 0.75rem;
+        text-align: left;
+      }
+      .alert-list th {
+        background: #111827;
+        color: #f9fafb;
+      }
+      .status-new {
+        color: #04516b;
+        font-weight: 700;
+      }
+      .status-viewed {
+        color: #6b7280;
+      }
+      .page-note {
+        margin-top: 1rem;
+        color: #374151;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Phishing Detector Portal</h1>
+    </header>
+    <main>
+      <p class="page-note">
+        This portal shows the running list of confirmed phishing emails detected from Gmail. New alerts will trigger a browser notification popup.
+      </p>
+      <table class="alert-list">
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Received</th>
+            <th>Detected</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="alerts-body">
+          <tr>
+            <td colspan="5">Loading phishing alerts...</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="page-note" id="portal-status"></p>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

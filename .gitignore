@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# Environment and credentials
+.env
+.env.*
+credentials.json
+*.secret
+*.key
+*.pem
+*.crt
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db

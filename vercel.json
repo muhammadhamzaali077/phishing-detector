@@ -1,0 +1,22 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "devCommand": "python src/portal/app.py",
+  "env": [
+    "OPENAI_API_KEY",
+    "GMAIL_CREDENTIALS_PATH",
+    "GMAIL_TOKEN_PATH",
+    "PHISHING_RECORDS_PATH",
+    "POLL_INTERVAL_SECONDS"
+  ],
+  "functions": {
+    "src/portal/app.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/src/portal/app.py"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "buildCommand": "pip install -r requirements.txt",
   "devCommand": "python src/portal/app.py",
-  "env": [
-    "OPENAI_API_KEY",
-    "GMAIL_CREDENTIALS_PATH",
-    "GMAIL_TOKEN_PATH",
-    "PHISHING_RECORDS_PATH",
-    "POLL_INTERVAL_SECONDS"
-  ],
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key",
+    "GMAIL_CREDENTIALS_PATH": "@gmail_credentials_path",
+    "GMAIL_TOKEN_PATH": "@gmail_token_path",
+    "PHISHING_RECORDS_PATH": "@phishing_records_path",
+    "POLL_INTERVAL_SECONDS": "@poll_interval_seconds"
+  },
   "functions": {
     "src/portal/app.py": {
       "runtime": "python3.11"
